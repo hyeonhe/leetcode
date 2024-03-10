@@ -6,8 +6,8 @@ class Solution:
             if char.isalnum():
                 arr.append(char.lower())
 
-        for i in range(len(arr) // 2):
-            if arr[i] != arr[len(arr) - i - 1]:
+        while len(arr) > 1:
+            if arr.popleft() != arr.pop():
                 return False
 
         return True
